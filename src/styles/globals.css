@@ -73,8 +73,8 @@ body {
   margin: 0px auto;
   width: 100%;
   max-width: 1600px;
-  min-height: 30vh;
-  padding: 80px 150px;
+  min-height: 100vh;
+  padding: 400px 150px;
 }
 
 .kFCHyX {
@@ -102,7 +102,7 @@ body {
   pointer-events: auto !important;
 }
 
-/* Add these classes to your global.css file */
+/* Navbar texts */
 .buZqzj-ol-li-a {
   padding: 10px;
   transition: color 0.1s ease-in-out;

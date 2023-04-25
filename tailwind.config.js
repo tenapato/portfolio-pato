@@ -17,6 +17,10 @@ module.exports = {
         'lightest-slate': 'var(--lightest-slate)',
         'light-slate': 'var(--light-slate)'
       },
+      fontFamily: {
+        sans: ['Calibre', 'Inter', 'San Francisco', 'SF Pro Text', '-apple-system', 'system-ui', 'sans-serif'],
+        mono: ['SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'monospace'],
+      },
     },
   },
   plugins: [],

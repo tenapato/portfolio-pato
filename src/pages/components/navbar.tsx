@@ -8,8 +8,8 @@ const NavBar = () => {
           <nav className="kFCHyX">
             <h1 className="pl-10 pt-2 font-bold text-xl">
                 <span className='font-bold text-xl pr-2'>{"{"}</span>
-                 <span className="text-green cursor-pointer">Name :</span> 
-                 <a href="/"> Patricio Tena</a>
+                 <span className="text-green text-lg font-mono cursor-pointer">Name :</span> 
+                 <a className='text-lg font-mono hover:text-green' href="/"> Patricio Tena</a>
                  <span className='font-bold text-xl pl-2'>{"}"}</span>
                  </h1>
             <ul className="flex space-x-4 buZqzj-ol">
@@ -17,13 +17,13 @@ const NavBar = () => {
               <li className="buZqzj-ol-li">
                 <Link href="/">
                   <span className="numbers-ol-li cursor-pointer">01 :</span>
-                  <span className="buZqzj-ol-li-a cursor-pointer">Home,</span>
+                  <span className="buZqzj-ol-li-a cursor-pointer">About,</span>
                 </Link>
               </li>
               <li className="buZqzj-ol-li">
                 <Link href="/about">
                   <span className="numbers-ol-li cursor-pointer">02 :</span>
-                  <span className="buZqzj-ol-li-a cursor-pointer">About,</span>
+                  <span className="buZqzj-ol-li-a cursor-pointer">Projects,</span>
                 </Link>
               </li>
               <li className="buZqzj-ol-li">
