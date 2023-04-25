@@ -172,9 +172,10 @@ body {
 
 /* Main div*/
 @media (max-height: 700px) and (min-width: 700px), (max-width: 360px){  
-  .eEjAsd {
+  .main-container {
     height: auto;
     padding-top: var(--nav-height);
+    transition: height 0.5s ease-in-out;
   }
 }
 /* 
