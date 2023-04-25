@@ -60,12 +60,11 @@ body {
   font-family: var(--font-sans);
   font-size: var(--fz-xl);
   line-height: 1.3;
-  background-image: linear-gradient(
-    to right,
-    var(--navy) 0%,
-    var(--dark-navy) 50%,
+  background-image: radial-gradient(
+    ellipse at center,
+    var(--dark-navy) 0%,
     var(--navy) 100%
-  );
+);
    padding: 0px 50px;
 }
 
