@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 const NavBar = () => {
+    let cvURL = process.env.CV_LINK;
   return (
     <div>
         <div className='flex justify-between items-center relative w-full text-lightest-slate font-mono z-12 pt-5 pb-5'>
@@ -34,9 +35,9 @@ const NavBar = () => {
               </li>
               <span className='buZqzj-ol-li'>{"}"}</span>
               <li>
-                <button className="buZqzj-button">
+                <a href= {cvURL} target="_blank" className="buZqzj-button">
                   Download Resume
-                </button>
+                </a>
               </li>
             </ul>
           </nav>
