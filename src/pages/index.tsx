@@ -12,7 +12,7 @@ const LandingPage = () => {
           Hey, my name is
         </p>
         <p className=" text-lightest-slate font-mono font-bold text-[clamp(40px,8vw,80px)]">
-          {"<"}Patricio Tena.{"/>"}
+          <a className='text-green'>{"<"}</a>Patricio Tena.<a className='text-green'>{"/>"}</a>
         </p>
         <p className="mb-7 ml-4 text-light-slate font-mono font-bold text-[clamp(40px,6vw,60px)]">
           I'm a Computer Engineer
