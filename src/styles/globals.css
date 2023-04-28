@@ -203,3 +203,27 @@ body {
   height: 100vh; */
   /* padding: 0px; */
 /* } */ 
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.ico
+
+.icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  padding-bottom: 10px;
+}
+
+.icon:hover {
+  color: #0077b5; /* Change this color to the desired hover color */
+}

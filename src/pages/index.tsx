@@ -1,11 +1,24 @@
 import React from 'react';
 import Link from 'next/link';
 import NavBar from './components/navbar';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const LandingPage = () => {
   return (
     <div>
       <NavBar/>
+
+      <div className="flex">
+        <div className="social-icons">
+          <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">
+            <FaGithub className="icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin className="icon" />
+          </a>
+        </div>
+        </div>
+
 
       <div className="main-container">
         <p className="mb-1 ml-1 text-green font-mono text-[clamp(var(--fz-s),5vw,var(--fz-md))] font-normal">
