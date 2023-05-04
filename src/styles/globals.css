@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* *{
+  border: 1px solid red;
+} */
 
 
 @media (prefers-color-scheme: dark) {
@@ -69,24 +72,32 @@ body {
 }
 
 .main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   margin: 0px auto;
   width: 100%;
   max-width: 1600px;
   min-height: 100vh;
-  padding: 400px 150px;
-  z-index: 2; /* Add this to place the main container above the second container */
+  z-index: 2;
 }
 
-.second-container {
+.content-wrapper {
+  margin-bottom: 400px;
+  margin-right: 150px;
+}
+
+/* .second-container {
   position: relative;
   margin: 0px auto;
   width: 100%;
   min-height: 100vh;
   padding: 20px 100px;
-  z-index: 1; /* Add this to place the second container below the main container */
-  top: -50vh; /* Add this to move the second container up so it starts just below the main container */
-}
+  z-index: 1; 
+  top: -50vh; 
+} */
 
 .kFCHyX {
   display: flex;

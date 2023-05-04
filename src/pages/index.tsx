@@ -12,7 +12,8 @@ const LandingPage = () => {
 
 
       <div className="main-container">
-        <p className="mb-1 ml-1 text-green font-mono text-[clamp(var(--fz-s),5vw,var(--fz-md))] font-normal">
+        <div className="content-wrapper">
+<p className="mb-1 ml-1 text-green font-mono text-[clamp(var(--fz-s),5vw,var(--fz-md))] font-normal">
           Hey, my name is
         </p>
         <p className=" text-lightest-slate font-mono font-bold text-[clamp(40px,8vw,80px)]">
@@ -21,19 +22,22 @@ const LandingPage = () => {
         <p className="mb-7 ml-4 text-light-slate font-mono font-bold text-[clamp(40px,6vw,60px)]">
           I'm a Computer Engineer
         </p>
+        </div>
+        
       </div>
 
-      <div className='second-container'>
+      <div className='second-container' id='#about'>
         <div className='flex'>
           <p className="mb-1 ml-1 text-green font-mono text-[clamp(var(--fz-s),5vw,var(--fz-md))] font-normal">
             01.
           </p>
-          <p className="mb-1 ml-2 text-light font-mono text-[clamp(20px,6vw,30px)] font-extrabold">
+          <p className="mb-1 ml-2 text-lightest-slate font-mono text-[clamp(10px,3vw,25px)] font-extrabold">
             About
           </p>
         </div>
       </div>
 
+   
 
     </div>
 
