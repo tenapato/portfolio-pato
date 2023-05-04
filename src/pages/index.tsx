@@ -1,23 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import NavBar from './components/navbar';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import LeftSidebar from './components/LeftSidebar';
 
 const LandingPage = () => {
   return (
     <div>
       <NavBar/>
 
-      <div className="flex">
-        <div className="social-icons">
-          <a href="https://github.com/tenapato" target="_blank" rel="noopener noreferrer">
-            <FaGithub className="icon" />
-          </a>
-          <a href="https://www.linkedin.com/in/tenapatricio/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="icon" />
-          </a>
-        </div>
-        </div>
+      <LeftSidebar/>
 
 
       <div className="main-container">
