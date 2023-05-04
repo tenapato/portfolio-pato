@@ -238,3 +238,98 @@ body {
 .icon:hover {
   color: var(--green); /* Change this color to the desired hover color */
 }
+
+@media (max-width: 768px) {
+body {
+font-size: var(--fz-lg);
+padding: 0px 20px;
+}
+
+.main-container {
+padding: 200px 50px;
+}
+
+.second-container {
+padding: 10px;
+top: 0;
+}
+
+.social-icons {
+top: 50%;
+left: 1rem;
+}
+
+.buZqzj-button {
+font-size: var(--fz-sm);
+}
+}
+
+@media screen and (max-width: 768px) {
+  .buZqzj-ol {
+    display: none;
+  }
+
+  .buZqzj-button {
+    display: none;
+  }
+}
+
+/* Hamburger menu styles */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 24px;
+  height: 16px;
+  cursor: pointer;
+  z-index: 1000;
+  position: absolute; /* Add this */
+  top: 1rem; /* Add this */
+  right: 1rem; /* Add this */
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--lightest-slate);
+  transition: all 0.3s ease;
+}
+
+.line.open:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.line.open:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Make the navigation items and burger menu responsive */
+@media screen and (max-width: 768px) {
+  .buZqzj-ol {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--navy);
+    text-align: center;
+  }
+
+  .buZqzj-ol.open {
+    display: flex;
+  }
+
+  .buZqzj-button {
+    margin-bottom: 1rem;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+}
