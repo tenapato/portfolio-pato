@@ -29,7 +29,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className='second-container' id='#about'>
+      <div className='second-container' id='about'>
         <div className='flex'>
           <p className="mb-1 ml-1 text-green font-mono text-[clamp(10px,3vw,25px)] font-normal">
             01.
@@ -40,15 +40,16 @@ const LandingPage = () => {
         </div>
         <div className="inner pt-3">
           <div className="text">
-            <p className='mb-1 ml-2 text-lightest-slate pb-3'>Computer Technology Engineer with a solid background in software development and information technologies.
-            </p><p className='mb-1 ml-2 text-lightest-slate pb-3'>With over 2 years of experience as a Full Stack Developer, I have developed a wide range of applications and systems using various technologies and platforms.
+            <p className='mb-1 ml-2 text-lightest-slate pb-3'><a className='text-green'>Computer Technology Engineer</a> with a solid background in software development and information technologies.
+            </p><p className='mb-1 ml-2 text-lightest-slate pb-3'>With over <a className='text-green'>2 years of experience</a>. as a Full Stack and Backend Developer, I have developed a wide range of applications and systems using various technologies and platforms.
             </p>
             <p className='mb-1 ml-2 text-lightest-slate pb-3'>
-              In addition to my practical experience, I am deeply interested in specializing in the fields of Artificial Intelligence, Cybersecurity, and DevOps and constantly seeking opportunities to expand my knowledge and skills in these areas.
+              In addition to my practical experience, I am deeply interested in specializing in the fields of <a className='text-green'>Artificial Intelligence, Cybersecurity, and DevOps</a>. and constantly seeking opportunities to expand my knowledge and skills in these areas.
             </p>
           </div>
           <img src='pp.jpg' alt='Your image description'></img>
         </div>
+        
       </div>
 
 
