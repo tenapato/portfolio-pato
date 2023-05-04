@@ -80,35 +80,54 @@ body {
   margin: 0px auto;
   width: 100%;
   max-width: 1600px;
-  min-height: 100vh;
+  min-height: 50vh;
+  padding-top: 20vh;
+  /* padding-bottom: 50vh; */
   z-index: 2;
 }
 
 .content-wrapper {
-  margin-bottom: 400px;
+  margin-bottom: 40px;
   margin-right: 150px;
 }
 
-/* .second-container {
+.first-description-box{
+   margin-top: 20;
+  /* margin-left: 100px; */
+  width: 50vh;
+}
+
+.second-container {
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   margin: 0px auto;
   width: 100%;
+  max-width: 1000px;
   min-height: 100vh;
-  padding: 20px 100px;
-  z-index: 1; 
-  top: -50vh; 
-} */
+  z-index: 1;
+}
 
-.kFCHyX {
-  display: flex;
-  justify-content: space-between;
+.second-container .inner {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  gap: 30px;
   align-items: center;
-  position: relative;
-  width: 100%;
-  color: var(--lightest-slate);
-  font-family: var(--font-mono);
-  counter-reset: item 0;
-  z-index: 12;
+}
+
+.second-container .text {
+  text-align: justify;
+  padding: 10% auto;
+}
+
+.second-container img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 3%;
 }
 
 .font-mono{
@@ -257,13 +276,50 @@ padding: 0px 20px;
 }
 
 .main-container {
-padding: 200px 50px;
-}
+    padding: 200px 50px;
+    display: flex;
+    flex-direction: center;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
 
-.second-container {
+  .content-wrapper {
+    margin-top: 0px;
+    margin-left: 0px;
+    flex-grow: 1;
+  }
+
+/* .second-container {
 padding: 10px;
 top: 0;
-}
+} */
+.first-description-box {
+    max-width: 100%;
+  }
+/* .second-container {
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0px auto;
+  width: 100%;
+  max-width: 1600px;
+  min-height: -100vh;
+  z-index: 1;
+} */
+ .second-container .inner {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  
+  .second-container .text {
+    margin-bottom: 30px;
+  }
+  
+  .second-container img {
+    max-width: 100%;
+  }
 
 .social-icons {
 top: 50%;
@@ -275,7 +331,7 @@ font-size: var(--fz-sm);
 }
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .buZqzj-ol {
     display: none;
   }
@@ -283,7 +339,7 @@ font-size: var(--fz-sm);
   .buZqzj-button {
     display: none;
   }
-}
+} */
 
 /* Hamburger menu styles */
 .burger-menu {

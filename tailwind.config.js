@@ -15,7 +15,8 @@ module.exports = {
       textColor: {
         'green': 'var(--green)',
         'lightest-slate': 'var(--lightest-slate)',
-        'light-slate': 'var(--light-slate)'
+        'light-slate': 'var(--light-slate)',
+        'slate': 'var(--slate)'
       },
       fontFamily: {
         sans: ['Calibre', 'Inter', 'San Francisco', 'SF Pro Text', '-apple-system', 'system-ui', 'sans-serif'],
