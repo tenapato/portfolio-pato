@@ -2,8 +2,28 @@ import React from 'react';
 import Link from 'next/link';
 import NavBar from './components/navbar';
 import LeftSidebar from './components/LeftSidebar';
+import ProjectCard from './components/ProjectCard';
 
 const LandingPage = () => {
+    const projects: any[] = [
+    {
+      title: 'Katanagatari',
+      description: 'Indie Fighting Game',
+      technologies: 'Unity,C#',
+      link: 'https://github.com/tenapato/katanagatari',
+    },{
+      title: 'Project 1',
+      description: 'Description of Project 1.',
+      technologies: 'React, Node.js, MongoDB',
+      link: 'https://example.com/project1',
+    },{
+      title: 'Project 1',
+      description: 'Description of Project 1.',
+      technologies: 'React, Node.js, MongoDB',
+      link: 'https://example.com/project1',
+    }
+    // Add more projects as needed
+  ];
   return (
     <div>
       <NavBar/>
@@ -52,6 +72,17 @@ const LandingPage = () => {
         
       </div>
 
+    <div className="second-container" id="projects">
+          <div className="flex">
+            <p className="mb-1 ml-1 text-green font-mono text-[clamp(10px,3vw,25px)] font-normal">02.</p>
+            <p className="mb-1 ml-2 text-lightest-slate font-mono text-[clamp(10px,3vw,25px)] font-extrabold">Projects</p>
+          </div>
+          <div className="inner pt-3">
+            {projects.map((project: any, index: number) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
+        </div>
 
     </div>
 
