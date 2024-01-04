@@ -1,3 +1,4 @@
+// ProjectCard.tsx
 import React from 'react';
 
 interface ProjectCardProps {
@@ -8,26 +9,10 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, technologies, link }) => {
-  const techList = technologies.split(',').map((tech) => tech.trim());
-
-  // Helper function to create the title with HTML tags
-  const createTitleWithTags = () => {
-    const titleParts = title.split('.');
-    return (
-      <React.Fragment>
-        <a className='text-green mr-2'>{"<"}</a>
-        <a className="font-bold text-white">{titleParts[0]}</a>
-        <a className='text-green ml-2'>{"/>"}</a>
-        {titleParts[1] && <span className="text-lightest-slate ml-2">{titleParts[1]}</span>}
-      </React.Fragment>
-    );
-  };
-
+  const techList = (technologies ?? '').split(',').map((tech) => tech.trim());
   return (
     <div className="project-card bg-gray-800 p-6 mb-8 rounded-md shadow-md">
-      <div className="flex items-center mb-4">
-        {createTitleWithTags()}
-      </div>
+      <a className='text-green mr-2'>{"<"}</a><a className="font-bold text-white">{title}</a><a className='text-green ml-2'>{"/>"}</a>
       <p className="text-light-slate mb-4">{description}</p>
       <div className="flex gap-10 mb-4">
         {techList.map((tech, index) => (
