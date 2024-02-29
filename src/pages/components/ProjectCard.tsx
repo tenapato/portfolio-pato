@@ -6,9 +6,11 @@ interface ProjectCardProps {
   description: string;
   technologies: string;
   link?: string;
+  demo?: string; // Add the demo parameter
+  img?: string; // Add the img parameter
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, technologies, link }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, technologies, link, demo, img }) => {
   const techList = (technologies ?? '').split(',').map((tech) => tech.trim());
   return (
     <div className="project-card bg-gray-800 p-6 mb-8 rounded-md shadow-md">
@@ -21,11 +23,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, technolog
           </span>
         ))}
       </div>
-      {link && (
-        <a href={link} target="_blank" rel="noopener noreferrer" className="text-green hover:underline">
-          View Project
-        </a>
-      )}
+      <div className="w-full">
+        {img && (
+          <img src={img} alt={title} className="w-full h-auto mb-4 object-cover" />
+        )}
+      </div>
+      
+      <div className="flex justify-between">
+        {link && (
+          <a href={link} target="_blank" rel="noopener noreferrer" className="text-green hover:underline">
+            View Project
+          </a>
+        )}
+        {demo && (
+          <a href={demo} target="_blank" rel="noopener noreferrer" className="text-green hover:underline">
+            View Demo
+          </a>
+        )}
+      </div>
     </div>
   );
 };

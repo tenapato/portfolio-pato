@@ -11,16 +11,15 @@ const LandingPage = () => {
       description: 'Indie Fighting Game',
       technologies: 'Unity,C#',
       link: 'https://github.com/tenapato/katanagatari',
+      demo: '',
+      img: ''
     },{
-      title: 'Project 1',
-      description: 'Description of Project 1.',
+      title: 'Data Vault',
+      description: 'Cloud Storage Service',
       technologies: 'React, Node.js, MongoDB',
-      link: 'https://example.com/project1',
-    },{
-      title: 'Project 1',
-      description: 'Description of Project 1.',
-      technologies: 'React, Node.js, MongoDB',
-      link: 'https://example.com/project1',
+      link: 'https://github.com/tenapato/data-vault-frontend?tab=readme-ov-file',
+      demo: 'https://datavaults.app/',
+      img: 'https://raw.githubusercontent.com/tenapato/data-vault-frontend/main/docs/Screenshot%202024-02-28%20at%205.50.03%E2%80%AFp.m..png'
     }
     // Add more projects as needed
   ];
