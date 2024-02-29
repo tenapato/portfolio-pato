@@ -16,7 +16,7 @@ const LandingPage = () => {
     },{
       title: 'Data Vault',
       description: 'Cloud Storage Service',
-      technologies: 'NextJS, R2, Cloudflare Workers, Javascript',
+      technologies: 'NextJS, R2, Javascript, Workers',
       link: 'https://github.com/tenapato/data-vault-frontend?tab=readme-ov-file',
       demo: 'https://datavaults.app/',
       img: 'https://raw.githubusercontent.com/tenapato/data-vault-frontend/main/docs/Screenshot%202024-02-28%20at%205.50.03%E2%80%AFp.m..png'
