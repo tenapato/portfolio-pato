@@ -23,12 +23,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, technolog
           </span>
         ))}
       </div>
-      <div className="w-full">
+      <div className="w-full h-full">
         {img && (
           <img src={img} alt={title} className="w-full h-auto mb-4 object-cover" />
         )}
       </div>
-      
       <div className="flex justify-between">
         {link && (
           <a href={link} target="_blank" rel="noopener noreferrer" className="text-green hover:underline">
