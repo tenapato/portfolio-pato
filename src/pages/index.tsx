@@ -20,6 +20,14 @@ const LandingPage = () => {
       link: 'https://github.com/tenapato/data-vault-frontend?tab=readme-ov-file',
       demo: 'https://datavaults.app/',
       img: 'https://raw.githubusercontent.com/tenapato/data-vault-frontend/main/docs/Screenshot%202024-02-28%20at%205.50.03%E2%80%AFp.m..png'
+    },
+    {
+      title: 'Kanji App',
+      description: 'Kanji Learning App',
+      technologies: 'ReactJS, Javascript',
+      link: 'https://github.com/tenapato/kanji-app',
+      demo: 'https://kanji-qhaltg3be-tenapato.vercel.app/',
+      img: 'https://raw.githubusercontent.com/tenapato/kanji-app/main/files/Screenshot%202024-03-05%20at%209.54.31%E2%80%AFp.m..png'
     }
     // Add more projects as needed
   ];
