@@ -3,6 +3,8 @@ import Link from 'next/link';
 import NavBar from './components/navbar';
 import LeftSidebar from './components/LeftSidebar';
 import ProjectCard from './components/ProjectCard';
+import WorkHistoryGithubBranches from '../components/work-history-github-branches';
+import CodingProjectsComponent from '../components/coding-projects';
 
 const LandingPage = () => {
     const projects: any[] = [
@@ -68,7 +70,7 @@ const LandingPage = () => {
         <div className="inner pt-3">
           <div className="text">
             <p className='mb-1 ml-2 text-lightest-slate pb-3'><a className='text-green'>Computer Technology Engineer</a> with a solid background in software development and information technologies.
-            </p><p className='mb-1 ml-2 text-lightest-slate pb-3'>With over <a className='text-green'>2 years of experience</a>. as a Full Stack and Backend Developer, I have developed a wide range of applications and systems using various technologies and platforms.
+            </p><p className='mb-1 ml-2 text-lightest-slate pb-3'>With over <a className='text-green'>3 years of experience</a>. as a Full Stack and Backend Developer, I have developed a wide range of applications and systems using various technologies and platforms.
             </p>
             <p className='mb-1 ml-2 text-lightest-slate pb-3'>
               In addition to my practical experience, I am deeply interested in specializing in the fields of <a className='text-green'>Artificial Intelligence, Cybersecurity, and DevOps</a>. and constantly seeking opportunities to expand my knowledge and skills in these areas.
@@ -79,19 +81,33 @@ const LandingPage = () => {
         
       </div>
 
-    <div className="second-container" id="projects">
+    <div className="third-container" id="projects">
           <div className="flex">
             <p className="mb-1 ml-1 text-green font-mono text-[clamp(10px,3vw,25px)] font-normal">02.</p>
             <p className="mb-1 ml-2 text-lightest-slate font-mono text-[clamp(10px,3vw,25px)] font-extrabold">Projects</p>
           </div>
-          <div className="inner pt-3">
-            {projects.map((project: any, index: number) => (
+          {/* <div className="inner pt-3"> */}
+            {/* {projects.map((project: any, index: number) => (
               <ProjectCard key={index} {...project} />
-            ))}
-          </div>
-        </div>
+            ))} */}
+          {/* </div> */}
+            <CodingProjectsComponent/>
+    </div>
+
+    <div className="second-container" id="work">
+      <div className="flex">
+        <p className="mb-1 ml-1 text-green font-mono text-[clamp(10px,3vw,25px)] font-normal">03.</p>
+        <p className="mb-1 ml-2 text-lightest-slate font-mono text-[clamp(10px,3vw,25px)] font-extrabold">Work</p>
+      </div>
+        {/* {projects.map((project: any, index: number) => (
+          <ProjectCard key={index} {...project} />
+        ))} */}
+        <WorkHistoryGithubBranches/>
+    </div>
 
     </div>
+
+    
 
     
   );

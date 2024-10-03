@@ -39,7 +39,7 @@ const NavBar = () => {
               </Link>
             </li>
             <li className="buZqzj-ol-li">
-              <Link href="/work">
+              <Link href="#work">
                 <span className="numbers-ol-li cursor-pointer">03 :</span>
                 <span className="buZqzj-ol-li-a cursor-pointer">Work</span>
               </Link>
