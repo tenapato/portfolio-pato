@@ -19,12 +19,12 @@ interface Project {
 const projects: Project[] = [
   {
     id: "1",
-    title: "Katanagatari",
-    description: "Indie Fighting Game",
-    imageUrl: "https://private-user-images.githubusercontent.com/56260951/373076048-79b63977-e922-42a9-be9d-10aadf1c9156.jpeg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjc5MTcwNjQsIm5iZiI6MTcyNzkxNjc2NCwicGF0aCI6Ii81NjI2MDk1MS8zNzMwNzYwNDgtNzliNjM5NzctZTkyMi00MmE5LWJlOWQtMTBhYWRmMWM5MTU2LmpwZWc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAwM1QwMDUyNDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04NTNiNTNiYmI3OTZmMThmZTBjOTNjZGZmZTgyYTE4NzZhYzBiYjViMDhlN2EzNDNjYzMyN2IxMmJlNjczOWVlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.HcEAdbAwtQ2LxvTmz5wn2iOhFzTpVOFWD1QjploFTOg",
-    githubUrl: "https://github.com/tenapato/katanagatari",
-    liveUrl: "",
-    tags: ["Unity", "C#"]
+    title: "RUUT",
+    description: "Development of the RUUT application backend from scratch, successfully launching it within eight months. Responsible for planning server architecture, implementation, and ensuring server stability.",
+    imageUrl: "https://ruut.mx/_next/image?url=https://cdn.sanity.io/images/v9z61bf3/production/b52b314db15f1fc4fd38ecb748c4a1a13649a81c-568x1178.png&w=640&q=75",
+    githubUrl: "https://ruut.mx/",
+    liveUrl: "https://apps.apple.com/mx/app/ruut/id1636922548",
+    tags: ["JavaScript", "Typescript", "NodeJS", "MongoDB", "Docker", "AWS"]
   },
   {
     id: "2",
@@ -43,8 +43,16 @@ const projects: Project[] = [
     githubUrl: "https://github.com/tenapato/kanji-app",
     liveUrl: "https://kanji-app-mauve.vercel.app/",
     tags: ["ReactJS", "JavaScript"]
+  },
+  {
+    id: "4",
+    title: "Katanagatari",
+    description: "Indie Fighting Game",
+    imageUrl: "https://private-user-images.githubusercontent.com/56260951/373076048-79b63977-e922-42a9-be9d-10aadf1c9156.jpeg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjc5MTcwNjQsIm5iZiI6MTcyNzkxNjc2NCwicGF0aCI6Ii81NjI2MDk1MS8zNzMwNzYwNDgtNzliNjM5NzctZTkyMi00MmE5LWJlOWQtMTBhYWRmMWM5MTU2LmpwZWc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAwM1QwMDUyNDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04NTNiNTNiYmI3OTZmMThmZTBjOTNjZGZmZTgyYTE4NzZhYzBiYjViMDhlN2EzNDNjYzMyN2IxMmJlNjczOWVlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.HcEAdbAwtQ2LxvTmz5wn2iOhFzTpVOFWD1QjploFTOg",
+    githubUrl: "https://github.com/tenapato/katanagatari",
+    liveUrl: "",
+    tags: ["Unity", "C#"]
   }
-  // Add more projects as needed
 ];
 
 export default function CodingProjectsComponent() {
