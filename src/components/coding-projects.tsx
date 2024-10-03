@@ -41,7 +41,7 @@ const projects: Project[] = [
     description: "Kanji Learning App",
     imageUrl: "https://raw.githubusercontent.com/tenapato/kanji-app/main/files/Screenshot%202024-03-05%20at%209.54.31%E2%80%AFp.m..png",
     githubUrl: "https://github.com/tenapato/kanji-app",
-    liveUrl: "https://kanji-qhaltg3be-tenapato.vercel.app/",
+    liveUrl: "https://kanji-app-mauve.vercel.app/",
     tags: ["ReactJS", "JavaScript"]
   }
   // Add more projects as needed
