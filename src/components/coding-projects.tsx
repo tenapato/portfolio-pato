@@ -61,6 +61,24 @@ const projects: Project[] = [
     githubUrl: "https://github.com/tenapato/cli-curl",
     liveUrl: "",
     tags: ["Shell", "Curl", "API"]
+  },
+  {
+    id: "6",
+    title: "Profanity Filter",
+    description: "An npm package that detects and filters offensive words and phrases from text. Features include multi-language support, leetspeak normalization, and customizable word lists.",
+    imageUrl: "https://static-00.iconduck.com/assets.00/npm-icon-2048x2048-8sw7kisf.png",
+    githubUrl: "https://github.com/tenapato/profanity-filter",
+    liveUrl: "https://www.npmjs.com/package/@tenapato/profanity-filter",
+    tags: ["JavaScript", "NPM", "NodeJS", "TypeScript"]
+  },
+  {
+    id: "7",
+    title: "Username Generator",
+    description: "An npm package generates Docker-like unique usernames by combining a random adjective, a random surname, and a random 3-digit number.",
+    imageUrl: "https://static-00.iconduck.com/assets.00/npm-icon-2048x2048-8sw7kisf.png",
+    githubUrl: "https://github.com/tenapato/username-generator",
+    liveUrl: "https://www.npmjs.com/package/@tenapato/username-generator",
+    tags: ["JavaScript", "NPM", "NodeJS", "TypeScript"]
   }
 ];
 
