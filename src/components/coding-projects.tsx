@@ -48,10 +48,19 @@ const projects: Project[] = [
     id: "4",
     title: "Katanagatari",
     description: "Indie Fighting Game",
-    imageUrl: "https://private-user-images.githubusercontent.com/56260951/373076048-79b63977-e922-42a9-be9d-10aadf1c9156.jpeg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjc5MTcwNjQsIm5iZiI6MTcyNzkxNjc2NCwicGF0aCI6Ii81NjI2MDk1MS8zNzMwNzYwNDgtNzliNjM5NzctZTkyMi00MmE5LWJlOWQtMTBhYWRmMWM5MTU2LmpwZWc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAwM1QwMDUyNDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04NTNiNTNiYmI3OTZmMThmZTBjOTNjZGZmZTgyYTE4NzZhYzBiYjViMDhlN2EzNDNjYzMyN2IxMmJlNjczOWVlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.HcEAdbAwtQ2LxvTmz5wn2iOhFzTpVOFWD1QjploFTOg",
+    imageUrl: "https://private-user-images.githubusercontent.com/56260951/373076048-79b63977-e922-42a9-be9d-10aadf1c9156.jpeg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDkwNzkyNjUsIm5iZiI6MTc0OTA3ODk2NSwicGF0aCI6Ii81NjI2MDk1MS8zNzMwNzYwNDgtNzliNjM5NzctZTkyMi00MmE5LWJlOWQtMTBhYWRmMWM5MTU2LmpwZWc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjA0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYwNFQyMzE2MDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00MWRiNjg3ZDA0M2NhMDI5OWI0YmY5ZDBmYmUyZDBlZTljYjE2ZmM2OTY3ZDY0ODE5OWM0YmNmMzZkMGFlZjViJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.AEH1w48IHunwhfsmQVjBeDoyl5i112lwWpksS7AiKu4",
     githubUrl: "https://github.com/tenapato/katanagatari",
     liveUrl: "",
     tags: ["Unity", "C#"]
+  },
+  {
+    id: "5",
+    title: "CLI Curl",
+    description: "A command-line interface (CLI) tool for managing API requests. This tool provides a structured way to organize and execute curl commands through shell scripts.`",
+    imageUrl: "https://github.com/tenapato/cli-curl/raw/main/img/logo.png",
+    githubUrl: "https://github.com/tenapato/cli-curl",
+    liveUrl: "",
+    tags: ["Shell", "Curl", "API"]
   }
 ];
 
