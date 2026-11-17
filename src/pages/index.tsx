@@ -6,6 +6,27 @@ import WorkHistoryGithubBranches from '../components/work-history-github-branche
 import CodingProjectsComponent from '../components/coding-projects';
 import TerminalBackground from '../components/terminal-background';
 
+const technologies = [
+  'TypeScript / JavaScript',
+  'Go / Python',
+  'Node.js / NestJS',
+  'React / Next.js',
+  'React Native / Expo',
+  'Swift / SwiftUI',
+  'Vite / Tailwind CSS',
+  'Drizzle ORM / TypeORM',
+  'PostgreSQL / MongoDB',
+  'SQLite / Supabase',
+  'DynamoDB / Qdrant',
+  'Model Context Protocol (MCP)',
+  'Cloudflare Workers / Workers AI',
+  'Cloudflare D1 / R2',
+  'AWS / Terraform',
+  'Amazon ECS / AWS Lambda',
+  'Amazon S3 / SQS',
+  'Docker / GitHub Actions',
+];
+
 export default function LandingPage() {
   return (
     <>
@@ -38,9 +59,9 @@ export default function LandingPage() {
               <p>I'm Patricio, a <strong>software engineer</strong> and Tecnológico de Monterrey graduate. I like understanding how things work, then building something useful with what I learn.</p>
               <p>My work spans investment infrastructure at <strong>RUUT</strong>, cloud storage, and developer tools. I enjoy the details behind a reliable backend: data models, payment flows, and services that hold up in production.</p>
               <p>Outside that work, I build personal projects and explore AI, cybersecurity, and DevOps. Sometimes that means a new CLI tool. Sometimes it means a sword-fighting game.</p>
-              <p className="stack-intro">Some of the technologies I work with:</p>
+              <p className="stack-intro">Technologies I work with</p>
               <ul className="technology-list">
-                {['TypeScript / JavaScript', 'Node.js / Python', 'React / Next.js', 'Cloudflare Workers', 'PostgreSQL / MongoDB', 'Docker / AWS'].map((technology) => <li key={technology}>{technology}</li>)}
+                {technologies.map((technology) => <li key={technology}>{technology}</li>)}
               </ul>
             </div>
             <figure className="portrait">
