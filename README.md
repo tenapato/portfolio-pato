@@ -1,38 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Patricio Tena's portfolio
 
-## Getting Started
+A Next.js portfolio with a dark navy palette, mint accents, monospace details, and a Git-inspired career timeline.
 
-First, run the development server:
+## Development
 
-```bash
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`. For a production build, run `npm run build`, then `npm start`.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Updating content
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- `src/pages/index.tsx` contains the introduction, about section, and contact details.
+- `src/data/projects.ts` contains the typed project list, categories, technologies, and links. Filter counts update from this data.
+- `src/components/work-history-github-branches.tsx` contains work history. Role dates are retained from the previous portfolio; update them when employment changes.
+- `public/projects/` contains authentic app screenshots, project-owned assets, and captures of repository usage documentation. `project-images.json` records their sources. Portrait app previews, project logos, and usage snippets retain their full aspect ratio. Generated concept covers are not used.
+- `src/styles/globals.css` contains the palette, layout, responsive rules, and reduced-motion styles.
+- `src/lib/terminal-background.ts` types shell commands and syntax-colored code, then scrolls completed lines away. It redraws at a capped frame rate, keeps cursor illumination, and pauses while the page is hidden. The pause control freezes the stream; reduced-motion preferences disable animation. The decorative canvas never captures pointer events.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+To show a resume link, set `NEXT_PUBLIC_CV_LINK` to the public document URL before building. See `.env.example`. Without a URL, the link is hidden. Contact links open an email draft to `tenapatricio@gmail.com`.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Project references
 
-## Learn More
+New project descriptions are based on the public [Kasane README](https://github.com/tenapato/kasane-mcp) and [Settlr README](https://github.com/tenapato/Settlr_App). Existing project and career descriptions were edited from the previous portfolio. The Username Generator links use the repository and package's actual underscore spelling.
 
-To learn more about Next.js, take a look at the following resources:
+Build Hub, BKR, PostulaT, and Litho-Graphic use descriptions and technology tags verified against their project documentation and package manifests. Their cards display a private-source label and omit repository links.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Verification
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Run `npm run build` for the production build and TypeScript checks. Before publishing visual or interaction changes, check:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- The page fits mobile, tablet, and desktop widths, including 320px.
+- Project filters show the appropriate cards and expose their selected state.
+- Mobile navigation closes after a selection or Escape; Escape returns focus to the toggle.
+- Project images load, internal links reach their sections, and external links open the intended projects.
+- Keyboard focus remains visible, and reduced-motion preferences disable smooth scrolling.

@@ -1,0 +1,86 @@
+{
+  "description": "Authentic project screenshots, repository assets, and usage documentation. No generated concept covers.",
+  "assets": [
+    {
+      "id": "build-hub",
+      "file": "build-hub-screenshot.jpg",
+      "kind": "Actual dashboard screenshot with test fixture projects",
+      "source": "github-builder/mobile/test-results/mobile-dashboard-desktop.png",
+      "alt": "Build Hub mobile builds dashboard showing iOS apps and build activity",
+      "layout": "screen",
+      "originalFile": "source-captures/build-hub.png"
+    },
+    {
+      "id": "bkr",
+      "file": "bkr-screenshot.jpg",
+      "kind": "Actual mobile app capture",
+      "source": "bkr/output/app-store-images/captures/01-clases.png",
+      "alt": "BKR mobile app class schedule and booking screen",
+      "layout": "portrait",
+      "originalFile": "source-captures/bkr.png"
+    },
+    {
+      "id": "postulat",
+      "file": "postulat-screenshot.jpg",
+      "kind": "Screenshot of the actual built project landing page",
+      "source": "PostulaT/Panel/dist, public landing page",
+      "alt": "PostulaT and People Evolution talent management platform landing page",
+      "layout": "screen",
+      "originalFile": "source-captures/postulat.png"
+    },
+    {
+      "id": "lithographic",
+      "file": "lithographic-screenshot.jpg",
+      "kind": "Screenshot of the actual public login page",
+      "source": "https://lithographic-app.pages.dev/login",
+      "alt": "Litho-Graphic quotation platform sign-in page",
+      "layout": "screen",
+      "originalFile": "source-captures/lithographic.png"
+    },
+    {
+      "id": "kasane",
+      "file": "kasane-screenshot.jpg",
+      "kind": "Screenshot of the actual built project landing page",
+      "source": "kasane/web/dist, public landing page",
+      "alt": "Kasane project landing page with its persistent agent memory product",
+      "layout": "screen",
+      "originalFile": "source-captures/kasane.png"
+    },
+    {
+      "id": "settlr",
+      "file": "settlr-app-store.jpg",
+      "kind": "Existing project App Store asset",
+      "source": "settlr_v2/App/docs/app-store-assets/01-dashboard.jpg",
+      "alt": "Settlr App Store preview showing its monthly finance dashboard",
+      "layout": "portrait",
+      "originalFile": "source-captures/settlr.jpg"
+    },
+    {
+      "id": "cli-curl",
+      "file": "cli-curl-logo.jpg",
+      "kind": "Existing repository logo",
+      "source": "https://github.com/tenapato/cli-curl/blob/main/img/logo.png",
+      "alt": "CLI Curl project logo from its repository",
+      "layout": "logo",
+      "originalFile": "source-captures/cli-curl.png"
+    },
+    {
+      "id": "profanity-filter",
+      "file": "profanity-filter-usage.png",
+      "kind": "Screenshot of actual repository usage documentation",
+      "source": "https://github.com/tenapato/profanity-filter#usage",
+      "alt": "Actual Profanity Filter installation and usage example from the project README",
+      "layout": "code",
+      "originalFile": "source-captures/profanity-filter.png"
+    },
+    {
+      "id": "username-generator",
+      "file": "username-generator-usage.png",
+      "kind": "Screenshot of actual repository usage documentation",
+      "source": "https://github.com/tenapato/username_generator#usage",
+      "alt": "Actual Username Generator usage example from the project README",
+      "layout": "code",
+      "originalFile": "source-captures/username-generator.png"
+    }
+  ]
+}

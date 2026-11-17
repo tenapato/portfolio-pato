@@ -1,62 +1,42 @@
-import React from 'react';
-import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
-const NavBar = () => {
-    let cvURL = process.env.CV_LINK;
-    const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
+const links = [
+  { id: 'about', label: 'About' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'work', label: 'Work' },
+  { id: 'contact', label: 'Contact' },
+];
 
-  const toggleBurgerMenu = () => {
-    setIsBurgerMenuOpen(!isBurgerMenuOpen);
-  };
+export default function NavBar() {
+  const [open, setOpen] = useState(false);
+  const toggle = useRef<HTMLButtonElement>(null);
+  const resumeUrl = process.env.NEXT_PUBLIC_CV_LINK;
+
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && open) { setOpen(false); toggle.current?.focus(); }
+    };
+    const closeOnDesktop = () => { if (window.innerWidth > 800) setOpen(false); };
+    document.addEventListener('keydown', closeOnEscape);
+    window.addEventListener('resize', closeOnDesktop);
+    return () => {
+      document.removeEventListener('keydown', closeOnEscape);
+      window.removeEventListener('resize', closeOnDesktop);
+    };
+  }, [open]);
+
   return (
-    <div>
-      <div className="burger-menu" onClick={toggleBurgerMenu}>
-        <div className={`line ${isBurgerMenuOpen ? 'open' : ''}`}></div>
-        <div className={`line ${isBurgerMenuOpen ? 'open' : ''}`}></div>
-        <div className={`line ${isBurgerMenuOpen ? 'open' : ''}`}></div>
-      </div>
-      <div className='flex justify-between items-center relative w-full text-lightest-slate font-mono z-12 pt-5 pb-5'>
-        <nav className="kFCHyX">
-          <h1 className="pl-10 pt-2 font-bold text-xl">
-            <span className='font-bold text-xl pr-2'>{"{"}</span>
-            <span className="text-green text-lg font-mono cursor-pointer">Name :</span>
-            <a className='text-lg font-mono hover:text-green' href="/"> Patricio Tena</a>
-            <span className='font-bold text-xl pl-2'>{"}"}</span>
-          </h1>
-          <ul className={`flex space-x-4 buZqzj-ol ${isBurgerMenuOpen ? 'open' : ''}`}>
-            <span className='buZqzj-ol-li'>{"{"}</span>
-            <li className="buZqzj-ol-li">
-              <Link href="#about">
-                <span className="numbers-ol-li cursor-pointer">01 :</span>
-                <span className="buZqzj-ol-li-a cursor-pointer">About,</span>
-              </Link>
-            </li>
-            <li className="buZqzj-ol-li">
-              <Link href="#projects">
-                <span className="numbers-ol-li cursor-pointer">02 :</span>
-                <span className="buZqzj-ol-li-a cursor-pointer">Projects,</span>
-              </Link>
-            </li>
-            <li className="buZqzj-ol-li">
-              <Link href="#work">
-                <span className="numbers-ol-li cursor-pointer">03 :</span>
-                <span className="buZqzj-ol-li-a cursor-pointer">Work</span>
-              </Link>
-            </li>
-            <span className='buZqzj-ol-li'>{"}"}</span>
-            <li>
-              <a href={cvURL} target="_blank" className="buZqzj-button">
-                Download Resume
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-
-
+    <header id="top" className="site-header">
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <nav className="site-nav" aria-label="Main navigation">
+        <a className="wordmark" href="#top" onClick={() => setOpen(false)}><span className="brace">{'{'}</span> <span className="syntax">Name:</span> Patricio Tena <span className="brace">{'}'}</span></a>
+        <button ref={toggle} className="menu-toggle" type="button" aria-controls="navigation-links" aria-expanded={open} aria-label={open ? 'Close navigation' : 'Open navigation'} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
+        <ul id="navigation-links" className={`navigation-links${open ? ' is-open' : ''}`}>
+          {links.map((link, index) => <li key={link.id}><a href={`#${link.id}`} onClick={() => setOpen(false)}><span className="syntax">0{index + 1}.</span> {link.label}</a></li>)}
+          {resumeUrl && <li><a className="outline-button resume-link" href={resumeUrl} target="_blank" rel="noopener noreferrer">Resume</a></li>}
+        </ul>
+      </nav>
+    </header>
   );
-};
-
-export default NavBar;
+}
