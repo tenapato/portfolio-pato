@@ -30,7 +30,18 @@ export default function NavBar() {
     <header id="top" className="site-header">
       <a className="skip-link" href="#main-content">Skip to content</a>
       <nav className="site-nav" aria-label="Main navigation">
-        <a className="wordmark" href="#top" onClick={() => setOpen(false)}><span className="brace">{'{'}</span> <span className="syntax">Name:</span> Patricio Tena <span className="brace">{'}'}</span></a>
+        <a className="wordmark" href="#top" onClick={() => setOpen(false)}>
+          <span className="wordmark-field">
+            <span className="brace">{'{'}</span>{' '}
+            <span className="syntax">name:</span> &quot;Patricio Tena&quot;
+          </span>
+          <span className="wordmark-details">
+            {', '}
+            <span className="wordmark-field"><span className="syntax">role:</span> &quot;Computer Engineer&quot;,</span>{' '}
+            <span className="wordmark-field"><span className="syntax">focus:</span> &quot;Backend &amp; Infrastructure&quot;</span>
+          </span>
+          &nbsp;<span className="brace">{'}'}</span>
+        </a>
         <button ref={toggle} className="menu-toggle" type="button" aria-controls="navigation-links" aria-expanded={open} aria-label={open ? 'Close navigation' : 'Open navigation'} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
         <ul id="navigation-links" className={`navigation-links${open ? ' is-open' : ''}`}>
           {links.map((link, index) => <li key={link.id}><a href={`#${link.id}`} onClick={() => setOpen(false)}><span className="syntax">0{index + 1}.</span> {link.label}</a></li>)}
