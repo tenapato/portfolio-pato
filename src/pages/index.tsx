@@ -72,7 +72,7 @@ export default function LandingPage() {
               </ul>
             </div>
             <figure className="portrait">
-              <div className="portrait-frame"><img src="/pp.jpg" alt="Patricio Tena" width="320" height="380" loading="lazy" /></div>
+              <div className="portrait-frame"><img src="/patricio-tena.jpg" alt="Patricio Tena" width="989" height="1280" loading="lazy" /></div>
               <figcaption><span className="syntax">//</span> {about.caption}</figcaption>
             </figure>
           </div>
