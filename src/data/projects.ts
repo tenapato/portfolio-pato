@@ -88,7 +88,7 @@ export const projects: Project[] = [
     imageLayout: 'portrait',
     description: 'A native iOS app for tracking expenses and income, managing shared bills, and keeping an eye on where the money goes.',
     tags: ['Swift', 'SwiftUI', 'Cloudflare Workers'],
-    githubUrl: 'https://github.com/tenapato/Settlr_App',
+    sourceVisibility: 'private',
     externalLinks: [
       { label: 'Website', url: 'https://settlr.cash' },
       { label: 'Web panel', url: 'https://web.settlr.cash/login' },

@@ -25,9 +25,9 @@ To show a resume link, set `NEXT_PUBLIC_CV_LINK` to the public document URL befo
 
 ## Project references
 
-New project descriptions are based on the public [Kasane README](https://github.com/tenapato/kasane-mcp) and [Settlr README](https://github.com/tenapato/Settlr_App). Existing project and career descriptions were edited from the previous portfolio. The Username Generator links use the repository and package's actual underscore spelling.
+The Kasane description is based on its public [README](https://github.com/tenapato/kasane-mcp); Settlr uses its private project documentation. Existing project and career descriptions were edited from the previous portfolio. The Username Generator links use the repository and package's actual underscore spelling.
 
-Build Hub, BKR, PostulaT, and Litho-Graphic use descriptions and technology tags verified against their project documentation and package manifests. Their cards display a private-source label and omit repository links.
+Build Hub, BKR, PostulaT, and Litho-Graphic use descriptions and technology tags verified against their project documentation and package manifests. Their cards, along with Settlr, display a private-source label and omit repository links.
 
 ## Verification
 
