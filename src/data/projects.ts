@@ -42,7 +42,7 @@ export const projects: Project[] = [
     tags: ['Expo', 'React Native', 'Cloudflare Workers', 'Supabase'],
     sourceVisibility: 'private',
     externalLinks: [
-      { label: 'Web app', url: 'https://www.bkracademy.com' },
+      { label: 'Download apps', url: 'https://www.bkracademy.com/apps' },
     ],
   },
   {
