@@ -1,11 +1,12 @@
 import Head from 'next/head';
+import { Locale, portfolioCopy } from '@/data/portfolio-copy';
 import styles from './portfolio-intro.module.css';
 
 const buildSteps = [
-  { text: 'Compiling pages…', delay: 700 },
-  { text: 'Compiling styles…', delay: 810 },
-  { text: 'Bundling assets…', delay: 920 },
-];
+  { key: 'pages', delay: 700 },
+  { key: 'styles', delay: 810 },
+  { key: 'assets', delay: 920 },
+] as const;
 
 // Set the flag before the first paint so the homepage does not flash behind the intro.
 const startIntro = `
@@ -35,7 +36,8 @@ const startIntro = `
 })();
 `;
 
-export default function PortfolioIntro() {
+export default function PortfolioIntro({ locale }: { locale: Locale }) {
+  const { intro } = portfolioCopy[locale];
   return (
     <>
       <Head>
@@ -50,16 +52,16 @@ export default function PortfolioIntro() {
             <span className={styles.caret} />
           </p>
           <p className={styles.status}>
-            <span className={styles.starting}><span className={styles.accent}>⠋</span> Container portfolio Starting</span>
-            <span className={styles.started}><span className={styles.accent}>✓</span> Container portfolio Started</span>
+            <span className={styles.starting}><span className={styles.accent}>⠋</span> {intro.starting}</span>
+            <span className={styles.started}><span className={styles.accent}>✓</span> {intro.started}</span>
           </p>
           <p className={styles.status}>
-            {buildSteps.map(({ text, delay }) => (
-              <span key={text} className={styles.buildStep} style={{ animationDelay: `${delay}ms` }}>
-                <span className={styles.accent}>›</span> {text}
+            {buildSteps.map(({ key, delay }) => (
+              <span key={key} className={styles.buildStep} style={{ animationDelay: `${delay}ms` }}>
+                <span className={styles.accent}>›</span> {intro[key]}
               </span>
             ))}
-            <span className={styles.buildComplete}><span className={styles.accent}>✓</span> Compiled successfully</span>
+            <span className={styles.buildComplete}><span className={styles.accent}>✓</span> {intro.complete}</span>
           </p>
           <p className={styles.openCommand}>
             <span className={styles.accent}>$</span>{' '}
