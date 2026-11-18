@@ -1,0 +1,81 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: none;
+  place-items: center;
+  padding: 20px;
+  background: var(--dark-navy);
+  pointer-events: none;
+}
+
+.terminal {
+  width: min(100%, 420px);
+  padding: 18px;
+  border: 1px solid var(--lightest-navy);
+  border-radius: 6px;
+  background: var(--navy);
+  color: var(--white);
+  font: clamp(12px, 2.6vw, 15px)/1.65 var(--font-mono);
+}
+
+.path {
+  margin-bottom: 13px;
+  color: var(--light-slate);
+  font-size: 11px;
+}
+
+.accent { color: var(--green); }
+
+.command {
+  --characters: 16;
+  display: inline-block;
+  width: calc(var(--characters) * 1ch);
+  overflow: hidden;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+
+.caret {
+  display: inline-block;
+  width: .62em;
+  height: 1em;
+  margin-left: 3px;
+  background: var(--green);
+  vertical-align: -.12em;
+}
+
+.composeCommand .command { --characters: 20; }
+.openCommand { margin-top: 8px; }
+
+.status {
+  display: grid;
+  color: var(--light-slate);
+}
+
+.status > span { grid-area: 1 / 1; }
+.starting, .buildStep { visibility: hidden; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html[data-portfolio-intro] .loader {
+    display: grid;
+    animation: fade 1800ms both;
+  }
+
+  .composeCommand .command { animation: type 450ms steps(var(--characters), end) both; }
+  .composeCommand .caret { animation: hide 450ms both; }
+  .starting { animation: hide 240ms 450ms forwards; }
+  .started { animation: show 1ms 690ms both; }
+  .buildStep { animation: hide 110ms forwards; }
+  .buildComplete { animation: show 1ms 1030ms both; }
+  .openCommand { animation: show 1ms 1100ms both; }
+  .openCommand .command { animation: type 270ms steps(var(--characters), end) 1100ms both; }
+}
+
+@keyframes type { from { width: 0; } }
+@keyframes show { from { visibility: hidden; } to { visibility: visible; } }
+@keyframes hide { from { visibility: visible; } to { visibility: hidden; } }
+@keyframes fade {
+  0%, 76% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}

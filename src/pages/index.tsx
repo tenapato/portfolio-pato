@@ -4,6 +4,7 @@ import NavBar from './components/navbar';
 import LeftSidebar from './components/LeftSidebar';
 import WorkHistoryGithubBranches from '../components/work-history-github-branches';
 import CodingProjectsComponent from '../components/coding-projects';
+import PortfolioIntro from '../components/portfolio-intro';
 import TerminalBackground from '../components/terminal-background';
 
 const technologies = [
@@ -36,6 +37,7 @@ export default function LandingPage() {
         <meta name="theme-color" content="#0a192f" />
         <meta property="og:title" content="Patricio Tena | Software Engineer" />
       </Head>
+      <PortfolioIntro />
       <TerminalBackground />
       <NavBar />
       <main id="main-content" className="page-content">
