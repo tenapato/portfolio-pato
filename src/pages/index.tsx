@@ -86,8 +86,8 @@ export default function LandingPage() {
         <section id="contact" className="section contact-section" aria-labelledby="contact-title">
           <p className="eyebrow">04. What's next?</p>
           <h2 id="contact-title">Let's build something.</h2>
-          <p>Have a project in mind, a problem to work through, or just want to talk software? I'd like to hear from you.</p>
-          <a className="outline-button" href="mailto:tenapatricio@gmail.com"><Mail size={17} aria-hidden="true" /> Say hello</a>
+          <p>Have a project in mind or an idea you'd like to build? Let's talk.</p>
+          <a className="outline-button" href="mailto:tenapatricio@gmail.com"><Mail size={17} aria-hidden="true" /> Get in touch</a>
         </section>
       </main>
       <footer className="site-footer">
