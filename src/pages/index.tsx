@@ -92,7 +92,7 @@ export default function LandingPage() {
       </main>
       <footer className="site-footer">
         <a href="#top" aria-label="Back to top"><span className="syntax">&lt;</span> Patricio Tena <span className="syntax">/&gt;</span></a>
-        <p>Built with curiosity. And a little caffeine.</p>
+        <p lang="ja">つくりながら学ぶ。</p>
         <a href="https://github.com/tenapato" target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={13} aria-hidden="true" /></a>
       </footer>
     </>
