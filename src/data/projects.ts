@@ -10,8 +10,7 @@ export interface Project {
   imageAlt?: string;
   imageLayout?: 'screen' | 'portrait' | 'logo' | 'code';
   githubUrl?: string;
-  externalUrl?: string;
-  externalLabel?: string;
+  externalLinks?: { label: string; url: string }[];
   sourceVisibility?: 'private';
 }
 
@@ -21,7 +20,9 @@ export const projects: Project[] = [
     description: 'The backend behind an investment app. I built its services from the ground up, then worked on trading, ledgers, and payment integrations.',
     tags: ['TypeScript', 'Node.js', 'MongoDB', 'AWS'],
     image: '/projects/ruut.png',
-    externalUrl: 'https://apps.apple.com/mx/app/ruut/id1636922548', externalLabel: 'App Store',
+    externalLinks: [
+      { label: 'App Store', url: 'https://apps.apple.com/mx/app/ruut/id1636922548' },
+    ],
   },
   {
     id: 'build-hub', title: 'Build Hub', category: 'Developer tools',
@@ -40,6 +41,9 @@ export const projects: Project[] = [
     description: 'A mobile app and administration platform for class bookings, payments, and community features, with a shared backend serving members and staff.',
     tags: ['Expo', 'React Native', 'Cloudflare Workers', 'Supabase'],
     sourceVisibility: 'private',
+    externalLinks: [
+      { label: 'Web app', url: 'https://www.bkracademy.com' },
+    ],
   },
   {
     id: 'postulat', title: 'PostulaT', category: 'Apps & platforms',
@@ -49,6 +53,9 @@ export const projects: Project[] = [
     description: 'Recruiting software for managing vacancies, candidates, and applications. A full stack platform connecting hiring workflows with an administration panel.',
     tags: ['React', 'TypeScript', 'Cloudflare Workers', 'Supabase'],
     sourceVisibility: 'private',
+    externalLinks: [
+      { label: 'Website', url: 'https://www.people-evolution.mx' },
+    ],
   },
   {
     id: 'lithographic', title: 'Litho-Graphic', category: 'Apps & platforms',
@@ -58,6 +65,9 @@ export const projects: Project[] = [
     description: 'Print quotation software with configurable pricing formulas, approval workflows, and versioned quotes. Generates PDFs and lets customers review and respond to quotations.',
     tags: ['React', 'TypeScript', 'Cloudflare Workers', 'D1', 'R2'],
     sourceVisibility: 'private',
+    externalLinks: [
+      { label: 'Web app', url: 'https://app.litho-graphic.com' },
+    ],
   },
   {
     id: 'kasane', title: 'Kasane', category: 'Developer tools',
@@ -67,6 +77,9 @@ export const projects: Project[] = [
     description: 'A self-hosted memory service for AI agents. Project knowledge persists across sessions, with an MCP endpoint and searchable PostgreSQL-backed storage.',
     tags: ['Go', 'PostgreSQL', 'Qdrant', 'MCP'],
     githubUrl: 'https://github.com/tenapato/kasane-mcp',
+    externalLinks: [
+      { label: 'Website', url: 'https://getkasane.com' },
+    ],
   },
   {
     id: 'settlr', title: 'Settlr', category: 'Apps & platforms',
@@ -76,6 +89,11 @@ export const projects: Project[] = [
     description: 'A native iOS app for tracking expenses and income, managing shared bills, and keeping an eye on where the money goes.',
     tags: ['Swift', 'SwiftUI', 'Cloudflare Workers'],
     githubUrl: 'https://github.com/tenapato/Settlr_App',
+    externalLinks: [
+      { label: 'Website', url: 'https://settlr.cash' },
+      { label: 'Web panel', url: 'https://web.settlr.cash/login' },
+      { label: 'App Store', url: 'https://apps.apple.com/us/app/settlr/id6784443705' },
+    ],
   },
   {
     id: 'data-vault', title: 'Data Vault', category: 'Apps & platforms',
@@ -83,6 +101,9 @@ export const projects: Project[] = [
     tags: ['Next.js', 'JavaScript', 'R2', 'Workers'],
     image: '/projects/data-vault.png',
     githubUrl: 'https://github.com/tenapato/data-vault-frontend',
+    externalLinks: [
+      { label: 'Web app', url: 'https://www.datavaults.app' },
+    ],
   },
   {
     id: 'kanji', title: 'Kanji App', category: 'Experiments',
@@ -112,7 +133,9 @@ export const projects: Project[] = [
     description: 'A text filter with multiple languages, leetspeak normalization, and customizable word lists.',
     tags: ['TypeScript', 'Node.js', 'npm'],
     githubUrl: 'https://github.com/tenapato/profanity-filter',
-    externalUrl: 'https://www.npmjs.com/package/@tenapato/profanity-filter', externalLabel: 'npm',
+    externalLinks: [
+      { label: 'npm', url: 'https://www.npmjs.com/package/@tenapato/profanity-filter' },
+    ],
   },
   {
     id: 'username-generator', title: 'Username Generator', category: 'Developer tools',
@@ -122,6 +145,8 @@ export const projects: Project[] = [
     description: 'Docker-style usernames made from an adjective, a surname, and a number. A small package for a small, recurring problem.',
     tags: ['JavaScript', 'Node.js', 'npm'],
     githubUrl: 'https://github.com/tenapato/username_generator',
-    externalUrl: 'https://www.npmjs.com/package/@tenapato/username_generator', externalLabel: 'npm',
+    externalLinks: [
+      { label: 'npm', url: 'https://www.npmjs.com/package/@tenapato/username_generator' },
+    ],
   },
 ];

@@ -33,7 +33,7 @@ export default function CodingProjectsComponent() {
               <div className="project-links">
                 {project.sourceVisibility === 'private' && <span className="project-private"><Lock size={14} aria-hidden="true" /> Private source</span>}
                 {project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} source on GitHub`}><Github size={16} aria-hidden="true" /> Source <ArrowUpRight size={13} aria-hidden="true" /></a>}
-                {project.externalUrl && <a href={project.externalUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} on ${project.externalLabel}`}><ExternalLink size={16} aria-hidden="true" /> {project.externalLabel} <ArrowUpRight size={13} aria-hidden="true" /></a>}
+                {project.externalLinks?.map((link) => <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer" aria-label={`${project.title}: ${link.label}`}><ExternalLink size={16} aria-hidden="true" /> {link.label} <ArrowUpRight size={13} aria-hidden="true" /></a>)}
               </div>
             </div>
           </article>
