@@ -1,17 +1,49 @@
 import { useState } from 'react';
 import { ArrowUpRight, Github, ExternalLink, Folder, Lock } from 'lucide-react';
 import { Locale, portfolioCopy } from '@/data/portfolio-copy';
-import { Category, Project, projects } from '@/data/projects';
+import { Category, Project, ProjectPreview, projects } from '@/data/projects';
 
 const categories: Category[] = ['All', 'Apps & platforms', 'Developer tools', 'Experiments'];
 
-function ProjectArtwork({ project, locale }: { project: Project; locale: Locale }) {
+function ProjectPreviewImage({ preview, project, locale }: { preview: ProjectPreview; project: Project; locale: Locale }) {
   const [imageFailed, setImageFailed] = useState(false);
-  if (project.image && !imageFailed) {
-    const alt = project.imageAlt?.[locale] ?? portfolioCopy[locale].projects.imageAlt(project.title);
-    return <div className={`project-artwork artwork-${project.id} project-artwork--${project.imageLayout || 'screen'}`}><img src={project.image} alt={alt} loading="lazy" width="600" height="338" decoding="async" onError={() => setImageFailed(true)} /></div>;
+  const alt = preview.alt?.[locale] ?? portfolioCopy[locale].projects.imageAlt(project.title);
+
+  if (imageFailed && !preview.label) {
+    return <ProjectIcon />;
   }
+
+  return (
+    <div className={`project-artwork artwork-${project.id} project-artwork--${preview.layout ?? 'screen'}`}>
+      {imageFailed ? <ProjectIcon /> : (
+        <img src={preview.image} alt={alt} loading="lazy" width="600" height="338" decoding="async" onError={() => setImageFailed(true)} />
+      )}
+    </div>
+  );
+}
+
+function ProjectIcon() {
   return <div className="project-tool-icon" aria-hidden="true"><Folder size={28} strokeWidth={1.4} /></div>;
+}
+
+function ProjectArtwork({ project, locale }: { project: Project; locale: Locale }) {
+  const { previews } = project;
+  if (!previews) return <ProjectIcon />;
+  if (previews.length === 1) {
+    return <ProjectPreviewImage preview={previews[0]} project={project} locale={locale} />;
+  }
+
+  const labels = portfolioCopy[locale].projects.previews;
+  return (
+    <div className="project-previews">
+      {previews.map((preview) => (
+        <figure className={`project-preview project-preview--${preview.layout}`} key={preview.image}>
+          <ProjectPreviewImage preview={preview} project={project} locale={locale} />
+          <figcaption>{labels[preview.label]}</figcaption>
+        </figure>
+      ))}
+    </div>
+  );
 }
 
 export default function CodingProjectsComponent({ locale }: { locale: Locale }) {
@@ -26,7 +58,7 @@ export default function CodingProjectsComponent({ locale }: { locale: Locale }) 
       <p className="sr-only" role="status">{copy.count(visibleProjects.length, category === 'All' ? undefined : copy.categories[category])}</p>
       <div className="project-grid">
         {visibleProjects.map((project) => (
-          <article className={`project-card${project.image ? '' : ' project-card-compact'}`} key={project.id}>
+          <article className={`project-card${project.previews ? '' : ' project-card-compact'}`} key={project.id}>
             <ProjectArtwork project={project} locale={locale} />
             <div className="project-body">
               <p className="project-category">{copy.categories[project.category]}</p>

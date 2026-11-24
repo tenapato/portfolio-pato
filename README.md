@@ -14,8 +14,8 @@ Open `http://localhost:3000`. For a production build, run `npm run build`, then 
 ## Updating content
 
 - `src/pages/index.tsx` contains the introduction, about section, and contact details.
-- `src/data/projects.ts` contains the typed project list, categories, technologies, and links. Filter counts update from this data.
-- Each project's `externalLinks` list supports separate website, web panel, App Store, or npm links alongside its GitHub source link. Settlr includes its website, web panel, and iOS app; Kasane, BKR, PostulaT, Litho-Graphic, and Data Vault link to their public sites or web apps.
+- `src/data/projects.ts` contains the project list, categories, technologies, and links. Filter counts update from this data. Projects with an app and a panel can supply two labeled entries in `previews` so both screenshots appear on the same card.
+- Each project's `externalLinks` list supports separate links for its app, panel, website, or package alongside its GitHub source link.
 - `src/components/work-history-github-branches.tsx` contains work history. Role dates are retained from the previous portfolio; update them when employment changes.
 - `public/projects/` contains authentic app screenshots, project-owned assets, and captures of repository usage documentation. `project-images.json` records their sources. Portrait app previews, project logos, and usage snippets retain their full aspect ratio. Generated concept covers are not used.
 - `src/styles/globals.css` contains the palette, layout, responsive rules, and reduced-motion styles.
