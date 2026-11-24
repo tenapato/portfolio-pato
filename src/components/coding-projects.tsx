@@ -1,24 +1,37 @@
-import { useState } from 'react';
-import { ArrowUpRight, Github, ExternalLink, Folder, Lock } from 'lucide-react';
+import { useRef, useState } from 'react';
+import { ArrowUpRight, Github, ExternalLink, Folder, Lock, X } from 'lucide-react';
 import { Locale, portfolioCopy } from '@/data/portfolio-copy';
 import { Category, Project, ProjectPreview, projects } from '@/data/projects';
 
 const categories: Category[] = ['All', 'Apps & platforms', 'Developer tools', 'Experiments'];
 
-function ProjectPreviewImage({ preview, project, locale }: { preview: ProjectPreview; project: Project; locale: Locale }) {
-  const [imageFailed, setImageFailed] = useState(false);
-  const alt = preview.alt?.[locale] ?? portfolioCopy[locale].projects.imageAlt(project.title);
+type PreviewSelection = { image: string; title: string; alt: string };
+type ArtworkProps = { project: Project; locale: Locale; onOpen: (selection: PreviewSelection) => void };
 
-  if (imageFailed && !preview.label) {
-    return <ProjectIcon />;
+function ProjectPreviewImage({ preview, project, locale, onOpen }: ArtworkProps & { preview: ProjectPreview }) {
+  const [imageFailed, setImageFailed] = useState(false);
+  const copy = portfolioCopy[locale].projects;
+  const alt = preview.alt?.[locale] ?? copy.imageAlt(project.title);
+  const title = preview.label ? `${project.title} · ${copy.previews[preview.label]}` : project.title;
+  const className = `project-artwork artwork-${project.id} project-artwork--${preview.layout ?? 'screen'}`;
+
+  if (imageFailed) {
+    return preview.label ? <div className={className}><ProjectIcon /></div> : <ProjectIcon />;
   }
 
   return (
-    <div className={`project-artwork artwork-${project.id} project-artwork--${preview.layout ?? 'screen'}`}>
-      {imageFailed ? <ProjectIcon /> : (
-        <img src={preview.image} alt={alt} loading="lazy" width="600" height="338" decoding="async" onError={() => setImageFailed(true)} />
-      )}
-    </div>
+    <button
+      type="button"
+      className={className}
+      aria-label={copy.enlargeImage(title)}
+      aria-haspopup="dialog"
+      onClick={(event) => {
+        event.currentTarget.focus({ preventScroll: true });
+        onOpen({ image: preview.image, title, alt });
+      }}
+    >
+      <img src={preview.image} alt={alt} loading="lazy" width="600" height="338" decoding="async" onError={() => setImageFailed(true)} />
+    </button>
   );
 }
 
@@ -26,11 +39,11 @@ function ProjectIcon() {
   return <div className="project-tool-icon" aria-hidden="true"><Folder size={28} strokeWidth={1.4} /></div>;
 }
 
-function ProjectArtwork({ project, locale }: { project: Project; locale: Locale }) {
+function ProjectArtwork({ project, locale, onOpen }: ArtworkProps) {
   const { previews } = project;
   if (!previews) return <ProjectIcon />;
   if (previews.length === 1) {
-    return <ProjectPreviewImage preview={previews[0]} project={project} locale={locale} />;
+    return <ProjectPreviewImage preview={previews[0]} project={project} locale={locale} onOpen={onOpen} />;
   }
 
   const labels = portfolioCopy[locale].projects.previews;
@@ -38,7 +51,7 @@ function ProjectArtwork({ project, locale }: { project: Project; locale: Locale 
     <div className="project-previews">
       {previews.map((preview) => (
         <figure className={`project-preview project-preview--${preview.layout}`} key={preview.image}>
-          <ProjectPreviewImage preview={preview} project={project} locale={locale} />
+          <ProjectPreviewImage preview={preview} project={project} locale={locale} onOpen={onOpen} />
           <figcaption>{labels[preview.label]}</figcaption>
         </figure>
       ))}
@@ -48,6 +61,12 @@ function ProjectArtwork({ project, locale }: { project: Project; locale: Locale 
 
 export default function CodingProjectsComponent({ locale }: { locale: Locale }) {
   const [category, setCategory] = useState<Category>('All');
+  const [selection, setSelection] = useState<PreviewSelection | null>(null);
+  const dialog = useRef<HTMLDialogElement>(null);
+  function openPreview(preview: PreviewSelection) {
+    setSelection(preview);
+    dialog.current?.showModal();
+  }
   const visibleProjects = projects.filter((project) => category === 'All' || project.category === category);
   const { projects: copy, technologies } = portfolioCopy[locale];
   return (
@@ -59,7 +78,7 @@ export default function CodingProjectsComponent({ locale }: { locale: Locale }) 
       <div className="project-grid">
         {visibleProjects.map((project) => (
           <article className={`project-card${project.previews ? '' : ' project-card-compact'}`} key={project.id}>
-            <ProjectArtwork project={project} locale={locale} />
+            <ProjectArtwork project={project} locale={locale} onOpen={openPreview} />
             <div className="project-body">
               <p className="project-category">{copy.categories[project.category]}</p>
               <h3><span className="syntax">&lt;</span> {project.title} <span className="syntax">/&gt;</span></h3>
@@ -79,6 +98,23 @@ export default function CodingProjectsComponent({ locale }: { locale: Locale }) 
           </article>
         ))}
       </div>
+      <dialog
+        ref={dialog}
+        className="project-lightbox"
+        aria-labelledby="project-lightbox-title"
+        onClose={() => setSelection(null)}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) event.currentTarget.close();
+        }}
+      >
+        <div className="project-lightbox-header">
+          <span id="project-lightbox-title">{selection?.title}</span>
+          <button type="button" aria-label={copy.closeImage} onClick={() => dialog.current?.close()}>
+            <X size={20} aria-hidden="true" />
+          </button>
+        </div>
+        {selection && <img src={selection.image} alt={selection.alt} />}
+      </dialog>
     </div>
   );
 }

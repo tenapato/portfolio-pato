@@ -43,6 +43,8 @@ const en = {
     filters: 'Filter projects',
     count: (count: number, category?: string) => `Showing ${count} ${count === 1 ? 'project' : 'projects'}${category ? ` in ${category}` : ''}`,
     imageAlt: (title: string) => `${title} project preview`,
+    enlargeImage: (title: string) => `Enlarge image for ${title}`,
+    closeImage: 'Close image',
     previews: {
       'iOS app': 'iOS app',
       'Mobile app': 'Mobile app',
@@ -139,6 +141,8 @@ export const portfolioCopy: Record<Locale, typeof en> = {
       filters: 'Filtrar proyectos',
       count: (count, category) => `Se ${count === 1 ? 'muestra' : 'muestran'} ${count} ${count === 1 ? 'proyecto' : 'proyectos'}${category ? ` en ${category}` : ''}`,
       imageAlt: (title) => `Vista previa de ${title}`,
+      enlargeImage: (title) => `Ampliar imagen de ${title}`,
+      closeImage: 'Cerrar imagen',
       previews: {
         'iOS app': 'App para iOS',
         'Mobile app': 'App móvil',
