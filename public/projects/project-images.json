@@ -20,6 +20,14 @@
       "originalFile": "source-captures/bkr.png"
     },
     {
+      "id": "bkr-panel",
+      "file": "bkr-panel.jpg",
+      "kind": "Screenshot of the administration dashboard with sample data",
+      "source": "bkr/bkr_webapp/web_app/src/components/dashboard.tsx",
+      "alt": "BKR administration dashboard showing sample academy activity and membership charts",
+      "layout": "screen"
+    },
+    {
       "id": "postulat",
       "file": "postulat-screenshot.jpg",
       "kind": "Screenshot of the actual built project landing page",
@@ -27,6 +35,22 @@
       "alt": "PostulaT and People Evolution talent management platform landing page",
       "layout": "screen",
       "originalFile": "source-captures/postulat.png"
+    },
+    {
+      "id": "postulat-candidate",
+      "file": "postulat-candidate.jpg",
+      "kind": "Screenshot of the candidate app sign-in page",
+      "source": "https://www.people-evolution.mx/candidate/login",
+      "alt": "Sign-in screen for candidates applying through PostulaT",
+      "layout": "screen"
+    },
+    {
+      "id": "postulat-panel",
+      "file": "postulat-panel.jpg",
+      "kind": "Screenshot of the recruiter sign-in page",
+      "source": "https://www.people-evolution.mx/postulate/admin/dashboard",
+      "alt": "People Evolution sign-in screen used by PostulaT recruiters",
+      "layout": "screen"
     },
     {
       "id": "lithographic",
@@ -54,6 +78,14 @@
       "alt": "Settlr App Store preview showing its monthly finance dashboard",
       "layout": "portrait",
       "originalFile": "source-captures/settlr.jpg"
+    },
+    {
+      "id": "settlr-panel",
+      "file": "settlr-panel.jpg",
+      "kind": "Screenshot of the web dashboard with sample data",
+      "source": "settlr_v2/Panel/src/routes/workspace/Dashboard.tsx",
+      "alt": "Settlr web dashboard showing income, expenses, and savings with sample data",
+      "layout": "screen"
     },
     {
       "id": "cli-curl",

@@ -116,6 +116,28 @@ h1, h2, h3 { color: var(--lightest-slate); line-height: 1.25; }
 .project-artwork--code { background: #161c23; }
 .project-artwork--code img { object-fit: contain; }
 
+.project-previews {
+  display: flex;
+  gap: 10px;
+  padding: 12px 12px 10px;
+  background: #0b1729;
+  border-bottom: 1px solid rgba(136,146,176,.1);
+}
+.project-preview { flex: 1 1 0; min-width: 0; margin: 0; }
+.project-preview--portrait { flex-grow: .42; }
+.project-previews .project-artwork {
+  display: grid;
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  place-items: center;
+  height: clamp(138px, 18vw, 208px);
+  border: 1px solid rgba(136,146,176,.12);
+  border-radius: 4px;
+  background: #080f1b;
+}
+.project-previews .project-artwork img { object-fit: contain; object-position: center; }
+.project-previews .project-tool-icon { margin: 0; }
+.project-preview figcaption { padding-top: 7px; color: var(--light-slate); font: 10px/1.4 var(--font-mono); }
+
 .project-card:hover .project-artwork img { transform: scale(1.025); }
 .artwork-ruut { background: #e7edea; padding: 20px; }
 .artwork-ruut img { object-fit: contain; }
